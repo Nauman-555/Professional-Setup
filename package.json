@@ -1,0 +1,15 @@
+{
+  "name": "professional-setup",
+  "version": "1.0.0",
+  "description": "Setting Up Professional Backend Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chai",
+    "nauman"
+  ],
+  "author": "Nauman Zaib",
+  "license": "ISC"
+}
