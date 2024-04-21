@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema(
       trim: true,
       index: true,
     },
-    Avatar: {
+    avatar: {
       type: String,
       required: true,
     },
@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema(
         ref: "Video",
       },
     ],
-    Password: {
+    password: {
       type: String,
       required: [true, "Password is necessary"],
     },
@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema(
 userSchema.pre("save", async function (next) {
   if (!this.isModified("Password")) return next();
 
-  this.Password = bcrypt.hash(this.Password, 10);
+  this.Password = await bcrypt.hash(this.Password, 10);
   next();
 });
 
