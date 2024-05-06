@@ -1,9 +1,9 @@
-class ApiError extends Errors {
+class ApiError extends Error {
   constructor(
     statusCode,
     message = "Message not sent",
     stack = "",
-    error = []
+    errors = []
   ) {
     super(message);
     this.statusCode = statusCode;
