@@ -267,6 +267,10 @@ const updateAvatarImage = asynchandler(async (req, res) => {
     },
     { new: true }
   ).select("-password");
+  return;
+  res
+    .status(200)
+    .json(new ApiResponse(200, user, "Avatar Image updated successfully"));
 });
 
 // Update Cover Image
@@ -290,6 +294,10 @@ const updateCoverImage = asynchandler(async (req, res) => {
     },
     { new: true }
   ).select("-password");
+  return;
+  res
+    .status(200)
+    .json(new ApiResponse(200, user, "Cover Image updated successfully"));
 });
 export {
   registerUser,
