@@ -138,7 +138,7 @@ const logoutUser = asynchandler(async (req, res) => {
     req.user._id,
     {
       $set: {
-        refreshtoken: undefined,
+        refreshtoken: 1,
       },
     },
     {
